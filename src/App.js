@@ -4,9 +4,14 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/styles';
 import CardMedia from '@material-ui/core/CardMedia';
+import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+
 
 const useStyles = makeStyles(theme => ({
+
   button: {
     margin: theme.spacing(1),
     // background: 'green'
@@ -25,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   google: {
-    background: '#3A7CEC',
+    background: '#FDCC17',
     color: 'white',
     margin: theme.spacing(1),
   },
@@ -37,11 +42,18 @@ const useStyles = makeStyles(theme => ({
   },
 
   stitcher: {
-    background: '#FAC714',
+    background: '#3292C5',
     color: 'white',
     margin: theme.spacing(1),
-  }
+  },
+  card: {
+    height: '200px'
+  },
 
+  root: {
+    padding: theme.spacing(1, 1),
+    color: 'rgb(65, 65, 65)'
+  }
 }));
 
 
@@ -50,21 +62,32 @@ function App() {
   const classes = useStyles();
   const theme = useTheme();
 
+
   return (
     <div className="App">
 
+      <div className="zg-top">
+        <div className="card-container">
+          <Card className={classes.card}>
+            <img className="main-logo" src="https://i.iheart.com/v3/catalog/podcast/45924242" alt="fourth wall podcast logo" />
+          </Card>
+        </div>
 
-      <img className="main-logo" src="https://i.iheart.com/v3/catalog/podcast/45924242" alt="fourth wall podcast logo" />
+        <div className="paper-container">
+          <Paper className={classes.root}>
+            <Typography component="p">
+              Let's listen to The Fourth Wall on...
+          </Typography>
+          </Paper>
+        </div>
+      </div>
 
-
-      <h2>Want to hear The Fourth Wall?
-        <br />
-      </h2>
+      <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script>
 
       {/* https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975 */}
 
       <Button target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="contained" className={classes.apple}>
-        Apple Podcasts
+        Apple
       </Button>
       <br />
 
@@ -85,12 +108,12 @@ function App() {
         Spotify
       </Button>
 
-      <br/>
+      <br />
 
       <Button target="_blank" href="https://www.stitcher.com/podcast/anchor-podcasts/the-fourth-wall-with-zak-and-cody" variant="contained" className={classes.stitcher}>
         Stitcher
       </Button>
-  
+
     </div>
   );
 }
