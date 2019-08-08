@@ -11,6 +11,15 @@
 
 }
 
+.copyIcon {
+  width:24px;
+  height:24px;
+}
+
+.copyIcon > img {
+  margin-top: 10px;
+}
+
 .card-container {
   padding-top: 50px;
   width: 200px;
