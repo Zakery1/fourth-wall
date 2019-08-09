@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  background: #f5f5f5;
+  height: 800px;
+  .zg-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.card-container {
+		padding-top: 50px;
+		width: 200px;
+		color: rgb(65, 65, 65);
+	  }
+	  .paper-container {
+		padding: 20px 0 20px 0;
+		width: 300px;
+	  }
+
+	  .main-logo {
+		height: 200px;
+		color: #0000ff;
+	  }
+  }
+
+  .zg-bottom {
+
+
+	.zg-podcasts-container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+
+		.zg-podcast-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			align-content: stretch;
+			.zg-copy-button {
+				margin-right: 0;
+				.copyIcon {
+					width:24px;
+					height:24px;
+				  }
+			}
+		}
+		.copyIcon {
+			width:24px;
+			height:24px;
+		  }
+		  
+		  .copyIcon > img {
+			margin-top: 10px;
+		  }
+	} 
+  }
+}
