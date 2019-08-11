@@ -92,6 +92,7 @@ function App() {
       <br />
 
 
+
       <Button target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA" className={classes.youtube}>
         Youtube
       </Button>
@@ -110,9 +111,6 @@ function App() {
 
       <br />
 
-      <Button target="_blank" href="https://www.stitcher.com/podcast/anchor-podcasts/the-fourth-wall-with-zak-and-cody" variant="contained" className={classes.stitcher}>
-        Stitcher
-      </Button>
 
     </div>
   );
