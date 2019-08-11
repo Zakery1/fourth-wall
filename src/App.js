@@ -23,11 +23,6 @@ import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles(theme => ({
 
-	button: {
-		margin: theme.spacing(1),
-		// background: 'green'
-	},
-
 	apple: {
 		background: '#C463EB',
 		color: 'white',
@@ -53,6 +48,7 @@ const useStyles = makeStyles(theme => ({
 	},
 
 	stitcher: {
+    // width:'200px',
 		background: '#3292C5',
 		color: 'white',
 		margin: theme.spacing(1),
@@ -74,10 +70,23 @@ function App() {
 	const theme = useTheme();
 
 	const copyLinkToClipBoard = () => {
-		var copyText = document.getElementById("myInput");
-		copyText.select();
-		document.execCommand("copy");
-		alert("Copied the text: " + copyText.value);
+
+		let textArea = document.createElement("textarea");
+		textArea.value = "https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975";
+		document.body.appendChild(textArea);
+		textArea.select();
+		textArea = document.execCommand('copy');
+		textArea.classList.add(".zg-clipboard");
+
+
+		// console.log('copy triggered');
+		// console.log('@@@@@@@@', document);
+		// alert("Copied the text: ");
+		// var copyText = document.getElementById("myInput");
+		// console.log('in function', copyText);
+		// copyText.select();
+		// document.execCommand("copy");
+		// alert("Copied the text: " + copyText.value);
 	}
 
 	return (
@@ -103,12 +112,12 @@ function App() {
 	
 				<div className="zg-podcasts-container">
 				
-					<div className="zg-podcast-container">
+					<div className="zg-podcast-container" >
 						<Button target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="contained" className={classes.apple}>
 							Apple
 						</Button>
 
-						<IconButton className="zg-copy-button">
+						<IconButton  onClick={copyLinkToClipBoard} className="zg-copy-button">
 							<img className="copyIcon" src={appleCopy} alt="copyLink" />
 						</IconButton>
 					</div>
