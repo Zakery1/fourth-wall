@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/styles';
@@ -8,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Feed from './component/Feed';
 
 
 const useStyles = makeStyles(theme => ({
@@ -84,35 +84,42 @@ function App() {
 
       <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script>
 
-      {/* https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975 */}
+      <div className="link-holder">
 
-      <Button target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="contained" className={classes.apple}>
-        Apple
-      </Button>
-      <br />
+          <Button target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="contained" className={classes.apple}>
+            Apple
+          </Button>
+          <br />
 
 
-      <Button target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA" className={classes.youtube}>
-        Youtube
-      </Button>
+          <Button target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA" className={classes.youtube}>
+            Youtube
+          </Button>
 
-      <br />
+          <br />
 
-      <Button target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="contained" className={classes.google}>
-        Google
-      </Button>
+          <Button target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="contained" className={classes.google}>
+            Google
+          </Button>
 
-      <br />
+          <br />
 
-      <Button target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="contained" className={classes.spotify}>
-        Spotify
-      </Button>
+          <Button target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="contained" className={classes.spotify}>
+            Spotify
+          </Button>
 
-      <br />
+          <br />
 
-      <Button target="_blank" href="https://www.stitcher.com/podcast/anchor-podcasts/the-fourth-wall-with-zak-and-cody" variant="contained" className={classes.stitcher}>
-        Stitcher
-      </Button>
+          <Button target="_blank" href="https://www.stitcher.com/podcast/anchor-podcasts/the-fourth-wall-with-zak-and-cody" variant="contained" className={classes.stitcher}>
+            Stitcher
+          </Button>
+
+      </div>
+      
+      <div className="feeds">
+        <Feed/>
+      </div>
+	 
 
     </div>
   );
