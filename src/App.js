@@ -13,82 +13,81 @@ import Fab from '@material-ui/core/Fab';
 
 const useStyles = makeStyles(theme => ({
 
-  button: {
-    margin: theme.spacing(1),
-    width: '180px',
-    background: '#f1f4f6',
-    height: '70px',
-    background: 'green'
-  },
-
   apple: {
     border: 'solid #C463EB 2px',
     color: '#C463EB',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   youtube: {
     border: 'solid #FF0000 2px',
     color: '#FF0000',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   google: {
     border: 'solid #FDCC17 2px',
     color: '#FDCC17',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   spotify: {
     border: 'solid #1BD75F 2px',
     color: '#1BD75F ',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   podcastRepublic: {
     border: 'solid #5483DF 2px',
     color: '#5483DF',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   podcastAddict: {
     border: 'solid #F3873C 2px',
     color: '#F3873C',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   iHeart: {
     border: 'solid #C92325 2px',
     color: '#C92325',
     marginRight: theme.spacing(1),
+    marginTop: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
     background: '#f1f4f6',
-    height: '70px'
+    height: '55px'
   },
 
   card: {
@@ -200,11 +199,9 @@ function App() {
               </Typography>
             </Paper>
           </div>
-
         </div>
-
       </div>
-      <Feed />
+          <Feed />
     </div>
   );
 }
