@@ -8,44 +8,82 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Feed from './component/Feed';
+import Fab from '@material-ui/core/Fab';
 
 
 const useStyles = makeStyles(theme => ({
 
   button: {
     margin: theme.spacing(1),
+    width: '180px',
+    height: '70px'
     // background: 'green'
   },
 
   apple: {
-    background: '#C463EB',
-    color: 'white',
-    margin: theme.spacing(1),
+    border: 'solid #C463EB 2px',
+    color: '#C463EB',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
   },
 
   youtube: {
-    background: '#ED3833',
-    color: 'white',
-    margin: theme.spacing(1),
+    border: 'solid #FF0000 2px',
+    color: '#FF0000',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
   },
 
   google: {
-    background: '#FDCC17',
-    color: 'white',
-    margin: theme.spacing(1),
+    border: 'solid #FDCC17 2px',
+    color: '#FDCC17',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
   },
 
   spotify: {
-    background: '#1BD75F',
-    color: 'white',
-    margin: theme.spacing(1),
+    border: 'solid #1BD75F 2px',
+    color: '#1BD75F ',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
   },
 
-  stitcher: {
-    background: '#3292C5',
-    color: 'white',
-    margin: theme.spacing(1),
+  podcastRepublic: {
+    border: 'solid #5483DF 2px',
+    color: '#5483DF',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
   },
+
+  podcastAddict: {
+    border: 'solid #F3873C 2px',
+    color: '#F3873C',
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
+  },
+
+  iHeart: {
+    border: 'solid #C92325 2px',
+    color: '#C92325',
+    marginTop: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    fontSize: '12px',
+    width: '180px',
+    height: '70px'
+  },
+
   card: {
     height: '200px'
   },
@@ -86,41 +124,80 @@ function App() {
 
       <div className="link-holder">
 
-          <Button target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="contained" className={classes.apple}>
-            Apple
-          </Button>
-          <br />
+        <Fab target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="outlined" className={classes.apple}>
+          Listen on Apple <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
+        <br />
 
 
-          <Button target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA" className={classes.youtube}>
-            Youtube
-          </Button>
+        <Fab target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA"  variant="outlined" className={classes.youtube}>
+          Listen on Youtube <i class="material-icons">
+            arrow_forward
+                </i>
+        </Fab>
 
-          <br />
+        <br />
 
-          <Button target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="contained" className={classes.google}>
-            Google
-          </Button>
+        <Fab target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="outlined" className={classes.google}>
+          Listen on Google
+          <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
 
-          <br />
+        <br />
 
-          <Button target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="contained" className={classes.spotify}>
-            Spotify
-          </Button>
+        <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="outlined" className={classes.spotify}>
+          Listen on Spotify
+          <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
 
-          <br />
+        <br />
 
-          <Button target="_blank" href="https://www.stitcher.com/podcast/anchor-podcasts/the-fourth-wall-with-zak-and-cody" variant="contained" className={classes.stitcher}>
-            Stitcher
-          </Button>
+        <Fab target="_blank" href="https://www.podcastrepublic.net/podcast/1464608975" variant="outlined" className={classes.podcastRepublic}>
+          Listen on Podcast Republic
+          <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
+
+        <br />
+
+        <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="outlined" className={classes.podcastAddict}>
+          Listen on Podcast Addict
+          <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
+
+        <br />
+
+        <Fab target="_blank" href="https://www.iheart.com/podcast/966-the-fourth-wall-podcast-45924242/" variant="outlined" className={classes.iHeart}>
+          Listen on iHeart Radio
+          <i class="material-icons">
+            arrow_forward
+                </i>
+          </Fab>
+
+        <br />
+
+        <div className="feeds">
+          <div className="paper-container">
+            <Paper className={classes.root}>
+              <Typography component="p">
+                Listen now...
+              </Typography>
+            </Paper>
+          </div>
+
+        </div>
 
       </div>
-      
-      <div className="feeds">
-        <Feed/>
-      </div>
-	 
-
+      <Feed />
     </div>
   );
 }
