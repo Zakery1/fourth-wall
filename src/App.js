@@ -1,4 +1,8 @@
 import React from 'react';
+
+import Feed from './component/Feed';
+import Modal from './modal/Modal';
+
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/styles';
@@ -7,7 +11,6 @@ import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Feed from './component/Feed';
 import Fab from '@material-ui/core/Fab';
 
 
@@ -112,10 +115,10 @@ function App() {
 
       <div className="zg-top">
         <div className="card-container">
-          <Card className={classes.card}>
-            <img className="main-logo" src="https://i.iheart.com/v3/catalog/podcast/45924242" alt="fourth wall podcast logo" />
-          </Card>
+        <Modal/>
         </div>
+
+        
 
         <div className="paper-container">
           <Paper className={classes.root}>
@@ -126,7 +129,7 @@ function App() {
         </div>
       </div>
 
-      <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script>
+      {/* <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script> */}
 
       <div className="link-holder">
 
