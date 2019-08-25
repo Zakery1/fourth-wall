@@ -16,8 +16,9 @@ const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
     width: '180px',
-    height: '70px'
-    // background: 'green'
+    background: '#f1f4f6',
+    height: '70px',
+    background: 'green'
   },
 
   apple: {
@@ -26,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
@@ -35,6 +37,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
@@ -44,6 +47,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
@@ -53,6 +57,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
@@ -62,6 +67,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
@@ -71,16 +77,17 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 
   iHeart: {
     border: 'solid #C92325 2px',
     color: '#C92325',
-    marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
     fontSize: '12px',
     width: '180px',
+    background: '#f1f4f6',
     height: '70px'
   },
 

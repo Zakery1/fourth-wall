@@ -1,0 +1,28 @@
+.zgFeeds {
+    padding: 20px 0 0 0;
+    background: #f5f5f5;
+}
+
+.stylez {
+    padding: 0;
+    width: 350px;
+    height: 120px;
+    border: none;
+}
+
+@media only screen and (min-width: 400px) {
+    .zgFeeds {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: space-evenly;
+    }
+
+    .stylez {
+        background: #f5f5f5;
+
+    }
+}
+
