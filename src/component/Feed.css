@@ -1,0 +1,36 @@
+.zgFeeds {
+    padding: 10px 0 100px 0;
+    background: #f5f5f5;
+    
+}
+
+.stylez {
+    padding: 0;
+    width: 350px;
+    height: 120px;
+    border: none;
+}
+
+@media only screen and (min-width: 400px) {
+    .zgFeeds {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: space-evenly;
+      padding-bottom: 200px;
+    }
+
+    .stylez {
+        background: #f5f5f5;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+        border-radius: 4px;
+        width: 700px;
+        height: 120px;
+        margin: 40px 0 0 0;
+        background: #f5f5f5;
+    }
+
+}
+
