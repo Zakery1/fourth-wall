@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Feed from './component/Feed';
-import Suggest from './component/Suggest';
 import Modal from './modal/Modal';
 
 import './App.css';
@@ -205,7 +204,6 @@ function App() {
           </div>
         </div>
       </div>
-          <Suggest />
           <Feed />
     </div>
   );
