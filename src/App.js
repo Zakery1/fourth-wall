@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Feed from './component/Feed';
 import Modal from './modal/Modal';
 
 import './App.css';
