@@ -193,18 +193,7 @@ function App() {
           </Fab>
 
         <br />
-
-        <div className="feeds">
-          <div className="paper-container">
-            <Paper className={classes.root}>
-              <Typography component="p">
-                Listen now...
-              </Typography>
-            </Paper>
-          </div>
-        </div>
       </div>
-          <Feed />
     </div>
   );
 }
