@@ -4,10 +4,6 @@ import Modal from './modal/Modal';
 
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-import { useTheme } from '@material-ui/styles';
-import CardMedia from '@material-ui/core/CardMedia';
-import Card from '@material-ui/core/Card';
-import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Fab from '@material-ui/core/Fab';
@@ -106,11 +102,11 @@ const useStyles = makeStyles(theme => ({
 function App() {
   console.log('hello');
   const classes = useStyles();
-  const theme = useTheme();
+
 
 
   return (
-    <div className="App">
+    <div className="App media-friend">
 
       <div className="zg-top">
         <div className="card-container">
@@ -133,7 +129,7 @@ function App() {
       <div className="link-holder">
 
         <Fab target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="outlined" className={classes.apple}>
-          Listen on Apple <i class="material-icons">
+          Listen on Apple <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
@@ -141,7 +137,7 @@ function App() {
 
 
         <Fab target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA"  variant="outlined" className={classes.youtube}>
-          Listen on Youtube <i class="material-icons">
+          Listen on Youtube <i className="material-icons">
             arrow_forward
                 </i>
         </Fab>
@@ -150,7 +146,7 @@ function App() {
 
         <Fab target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="outlined" className={classes.google}>
           Listen on Google
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
@@ -159,7 +155,7 @@ function App() {
 
         <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="outlined" className={classes.spotify}>
           Listen on Spotify
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
@@ -168,7 +164,7 @@ function App() {
 
         <Fab target="_blank" href="https://www.podcastrepublic.net/podcast/1464608975" variant="outlined" className={classes.podcastRepublic}>
           Listen on Podcast Republic
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
@@ -177,7 +173,7 @@ function App() {
 
         <Fab target="_blank" href="http://podplayer.net/?podId=2422284&fbclid=IwAR1xK-By7B64duf_tnlOECVhOfwUBXolnNtnvKd_DrDjU_PkHXV8vJ0X5ZU" variant="outlined" className={classes.podcastAddict}>
           Listen on Podcast Addict
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
@@ -186,7 +182,7 @@ function App() {
 
         <Fab target="_blank" href="https://www.iheart.com/podcast/966-the-fourth-wall-podcast-45924242/" variant="outlined" className={classes.iHeart}>
           Listen on iHeart Radio
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
