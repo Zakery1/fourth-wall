@@ -7,13 +7,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Fab from '@material-ui/core/Fab';
+import { mediaHexHelper } from 'media-hex';
 
 
 const useStyles = makeStyles(theme => ({
 
   apple: {
     border: 'solid #C463EB 2px',
-    color: '#C463EB',
+    color: mediaHexHelper('apple'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 
   youtube: {
     border: 'solid #FF0000 2px',
-    color: '#FF0000',
+    color: mediaHexHelper('youtube'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 
   google: {
     border: 'solid #FDCC17 2px',
-    color: '#FDCC17',
+    color: mediaHexHelper('google'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -46,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 
   spotify: {
     border: 'solid #1BD75F 2px',
-    color: '#1BD75F ',
+    color: mediaHexHelper('spotify'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -57,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 
   podcastRepublic: {
     border: 'solid #5483DF 2px',
-    color: '#5483DF',
+    color: mediaHexHelper('podcast-republic'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -68,7 +69,7 @@ const useStyles = makeStyles(theme => ({
 
   podcastAddict: {
     border: 'solid #F3873C 2px',
-    color: '#F3873C',
+    color: mediaHexHelper('podcast-addict'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -79,7 +80,7 @@ const useStyles = makeStyles(theme => ({
 
   iHeart: {
     border: 'solid #C92325 2px',
-    color: '#C92325',
+    color: mediaHexHelper('i-heart-radio'),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
@@ -100,21 +101,15 @@ const useStyles = makeStyles(theme => ({
 
 
 function App() {
-  console.log('hello');
+
   const classes = useStyles();
-
-
 
   return (
     <div className="App media-friend">
-
       <div className="zg-top">
         <div className="card-container">
         <Modal/>
         </div>
-
-        
-
         <div className="paper-container">
           <Paper className={classes.root}>
             <Typography component="p">
