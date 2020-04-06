@@ -122,7 +122,7 @@ function App() {
         <div className="paper-container">
           <Paper className={classes.root}>
             <Typography component="p">
-              Let's listen to The Fourth Wall on...
+              Let's listen to Stage 18 on...
           </Typography>
           </Paper>
         </div>
