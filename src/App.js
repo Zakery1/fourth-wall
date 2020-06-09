@@ -38,8 +38,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   google: {
-    border: 'solid #FDCC17 2px',
-    color: '#FDCC17',
+    border: 'solid #FF5722 2px',
+    color: '#FF5722',
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
     fontSize: '12px',
