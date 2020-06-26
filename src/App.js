@@ -107,8 +107,6 @@ function App() {
   console.log('hello');
   const classes = useStyles();
   const theme = useTheme();
-
-
   return (
     <div className="App">
 
@@ -116,8 +114,6 @@ function App() {
         <div className="card-container">
         <Modal/>
         </div>
-
-        
 
         <div className="paper-container">
           <Paper className={classes.root}>
@@ -139,13 +135,11 @@ function App() {
           </Fab>
         <br />
 
-
         <Fab target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA"  variant="outlined" className={classes.youtube}>
           Listen on Youtube <i class="material-icons">
             arrow_forward
                 </i>
         </Fab>
-
         <br />
 
         <Fab target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="outlined" className={classes.google}>
@@ -154,7 +148,6 @@ function App() {
             arrow_forward
                 </i>
           </Fab>
-
         <br />
 
         <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="outlined" className={classes.spotify}>
