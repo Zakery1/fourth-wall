@@ -123,58 +123,58 @@ function App() {
 
       <div className="link-holder">
 
-        <Fab target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="outlined" className={classes.apple}>
-          Listen on Apple <i class="material-icons">
+        <Fab target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="extended" className={classes.apple}>
+          Listen on Apple <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
         <br />
 
-        <Fab target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA"  variant="outlined" className={classes.youtube}>
-          Listen on Youtube <i class="material-icons">
+        <Fab target="_blank" href="https://www.youtube.com/channel/UCrMRs4dZmAAmKkbeLalixAA"  variant="extended" className={classes.youtube}>
+          Listen on Youtube <i className="material-icons">
             arrow_forward
                 </i>
         </Fab>
         <br />
 
-        <Fab target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="outlined" className={classes.google}>
+        <Fab target="_blank" href="https://play.google.com/music/m/Isq5occ2n75eytqi3e44xes5ouy?t=The_Fourth_Wall_Podcast" variant="extended" className={classes.google}>
           Listen on Google
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
         <br />
 
-        <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="outlined" className={classes.spotify}>
+        <Fab target="_blank" href="https://open.spotify.com/show/75978jAwNVsjI2H6W4Gyux" variant="extended" className={classes.spotify}>
           Listen on Spotify
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
 
         <br />
 
-        <Fab target="_blank" href="https://www.podcastrepublic.net/podcast/1464608975" variant="outlined" className={classes.podcastRepublic}>
+        <Fab target="_blank" href="https://www.podcastrepublic.net/podcast/1464608975" variant="extended" className={classes.podcastRepublic}>
           Listen on Podcast Republic
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
 
         <br />
 
-        <Fab target="_blank" href="http://podplayer.net/?podId=2422284&fbclid=IwAR1xK-By7B64duf_tnlOECVhOfwUBXolnNtnvKd_DrDjU_PkHXV8vJ0X5ZU" variant="outlined" className={classes.podcastAddict}>
+        <Fab target="_blank" href="http://podplayer.net/?podId=2422284&fbclid=IwAR1xK-By7B64duf_tnlOECVhOfwUBXolnNtnvKd_DrDjU_PkHXV8vJ0X5ZU" variant="extended" className={classes.podcastAddict}>
           Listen on Podcast Addict
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
 
         <br />
 
-        <Fab target="_blank" href="https://www.iheart.com/podcast/966-the-fourth-wall-podcast-45924242/" variant="outlined" className={classes.iHeart}>
+        <Fab target="_blank" href="https://www.iheart.com/podcast/966-the-fourth-wall-podcast-45924242/" variant="extended" className={classes.iHeart}>
           Listen on iHeart Radio
-          <i class="material-icons">
+          <i className="material-icons">
             arrow_forward
                 </i>
           </Fab>
