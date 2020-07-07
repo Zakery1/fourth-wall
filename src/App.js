@@ -106,8 +106,9 @@ function App() {
     <div className="App">
 
       <div className="zg-top">
+
         <div className="card-container">
-        <Modal/>
+          <Modal/>
         </div>
 
         <div className="paper-container">
@@ -117,6 +118,7 @@ function App() {
           </Typography>
           </Paper>
         </div>
+        
       </div>
 
       {/* <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script> */}
