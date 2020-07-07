@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../modal/Modal.css';
+import '../modal/Modal.scss';
 
 import logo from '../asset/logo.jpeg';
 
