@@ -100,7 +100,6 @@ const useStyles = makeStyles(theme => ({
 
 
 function App() {
-  console.log('hello');
   const classes = useStyles();
   return (
     <div className="App">
