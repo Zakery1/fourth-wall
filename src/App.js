@@ -117,11 +117,9 @@ function App() {
           </Typography>
           </Paper>
         </div>
-        
+
       </div>
-
-      {/* <script type="text/javascript" language="javascript" src="https://www.boxofficemojo.com/data/js/wknd5.php"></script> */}
-
+      
       <div className="link-container">
 
         <Fab target="_blank" href="https://podcasts.apple.com/us/podcast/the-fourth-wall-podcast/id1464608975" variant="extended" className={classes.apple}>
