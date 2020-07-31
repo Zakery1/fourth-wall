@@ -13,37 +13,29 @@ import { Popover } from "@material-ui/core";
 function App() {
   const platformLinks = podcastPlatforms.map((platform) => {
     return (
-      <Button
-        target="_blank"
-        href={platform.url}
-        key={platform.id}
-        style={{ background: platform.hex }}
-        variant="contained"
-        color="primary"
-      >
-        {platform.name}
-        <i className="material-icons">arrow_forward</i>
-      </Button>
+      <div >
+        <Button
+          className="zg-block zg-link"
+          target="_blank"
+          href={platform.url}
+          key={platform.id}
+          style={{ background: platform.hex }}
+          variant="contained"
+          color="primary"
+        >
+          {platform.name}
+          <i className="material-icons">arrow_forward</i>
+        </Button>
+      </div>
     );
   });
 
   return (
     <div className="App">
-      <div className="zg-top">
-        {/* <div className="card-container">
-          <Modal />
-        </div> */}
-
-        <div className="paper-container">
-          <Paper>
-            <Typography component="p">
-              Let's listen to Stage 18 on...
-            </Typography>
-          </Paper>
-        </div>
+      <div className="zg-block-holder">
+        <Modal />
+        {platformLinks}
       </div>
-
-      {platformLinks}
     </div>
   );
 }

@@ -1,54 +1,24 @@
 .App {
-  /* text-align: center;
+  background-image: url('./asset/mobile-background.png');
 
-}
-
-.zg-top {
-
-}
-
-.paper-container {
-
-}
-
-.card-container {
-
-}
-
-.main-logo {
-  /* height: 200px; */
-}
-
-.feeds {
+  .zg-block-holder {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100vh;
+    .zg-block {
+      height: 150px;
+      width: 150px;
+  
+    }
+    .zg-link {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
 
 }
 
 @media only screen and (min-width: 400px) {
-  .App {
-
-  }
-
-  .zg-top {
-
-  }
-
-  .link-container {
-
-  }
-  
-  .link-holder {
-
-  }
-  
-  .paper-container {
-
-  }
-  
-  .card-container {
-
-  }
-  
-  .main-logo {
-
-  }
 }
