@@ -1,0 +1,27 @@
+.zg-modal {
+  height: 300px;
+  width: 300px;
+}
+
+.zg-link-modal {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+background: white;
+  .zg-link-in-modal {
+    background: white;
+  }
+  .zg-cancel-modal {
+    background: white;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .zg-modal {
+    height: 500px;
+    width: 500px;
+  }
+}
