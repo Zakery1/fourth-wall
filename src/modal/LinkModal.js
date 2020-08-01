@@ -2,9 +2,7 @@ import React from "react";
 
 import "../modal/LinkModal.scss";
 
-import logo from "../asset/logo.jpeg";
 import Card from "@material-ui/core/Card";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
@@ -13,7 +11,6 @@ export default function AlertDialogSlide(props) {
   const [open, setOpen] = React.useState(false);
 
   const platform = { ...props.platform };
-  console.log(platform);
 
   function handleClickOpen() {
     setOpen(true);
