@@ -10,9 +10,7 @@ function App() {
 
   const platformLinks = podcastPlatforms.map((platform) => {
     return (
-      <div key={platform.id}>
-        <LinkModal platform={platform} />
-      </div>
+        <LinkModal key={platform.id} platform={platform} />
     );
   });
 

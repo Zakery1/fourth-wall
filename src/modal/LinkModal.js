@@ -21,9 +21,9 @@ export default function AlertDialogSlide(props) {
   }
 
   return (
-    <div>
+    <div className="zg-block">
       <Button
-        className="zg-block"
+        className="zg-link-button"
         target="_blank"
         style={{ color: platform.hex, border: `2px solid ${platform.hex}` }}
         variant="contained"
@@ -35,7 +35,7 @@ export default function AlertDialogSlide(props) {
       <Dialog open={open} keepMounted onClose={handleClose}>
         <Card
           className="zg-link-modal"
-          style={{border: `4px solid ${platform.hex}`}}
+          style={{ border: `4px solid ${platform.hex}` }}
           target="_blank"
           href={platform.url}
         >
@@ -47,7 +47,7 @@ export default function AlertDialogSlide(props) {
           >
             Go to Stage 18 on {platform.name}
           </Button>
-          <br/>
+          <br />
           <Button
             style={{ color: platform.hex, border: `2px solid ${platform.hex}` }}
             className="zg-cancel-modal"
