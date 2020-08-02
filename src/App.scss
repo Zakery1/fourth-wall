@@ -1,5 +1,5 @@
 .App {
-  background-image: url('./asset/mobile-background.png');
+  background-image: url("./asset/mobile-background.png");
   .zg-block-holder {
     padding-top: 30px;
     display: flex;
@@ -9,14 +9,12 @@
     .zg-block {
       height: 150px;
       width: 150px;
-      font-family: 'Roboto', sans-serif;
-    }
-    .zg-link {
+      font-family: "Roboto", sans-serif;
       text-align: center;
       font-size: 22px;
+      background: white;
     }
   }
-
 }
 
 @media only screen and (min-width: 400px) {

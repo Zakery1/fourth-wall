@@ -23,10 +23,10 @@ export default function AlertDialogSlide() {
   }
 
   return (
-    <div className="zg-block">
-      <img
+    <div>
+      <img 
         onClick={handleClickOpen}
-        className="main-logo"
+        className="main-logo zg-block"
         src={logo}
         alt="fourth wall podcast logo"
       />

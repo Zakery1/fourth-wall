@@ -23,7 +23,7 @@ export default function AlertDialogSlide(props) {
   return (
     <div>
       <Button
-        className="zg-block zg-link"
+        className="zg-block"
         target="_blank"
         style={{ color: platform.hex, border: `2px solid ${platform.hex}` }}
         variant="contained"
