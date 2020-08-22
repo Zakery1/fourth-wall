@@ -15,7 +15,7 @@ function Search() {
     fetchData();
   }, []);
 
-  console.log("hello");
+  console.log(data);
 
   return <div></div>;
 }
