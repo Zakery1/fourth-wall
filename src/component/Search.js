@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function Search() {
-  return <div>search</div>;
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        "https://limitless-lowlands-38782.herokuapp.com/"
+      );
+      setData(response.data);
+    };
+
+    fetchData();
+  }, []);
+
+  console.log("hello");
+
+  return <div></div>;
 }
 
 export default Search;
