@@ -2,7 +2,7 @@ import React from "react";
 
 import LogoModal from "./modal/LogoModal";
 import LinkModal from './modal/LinkModal';
-import Search from './component/Search';
+// import Search from './component/Search';
 
 import podcastPlatforms from "./resource/podcastPlatforms";
 import "./App.scss";
