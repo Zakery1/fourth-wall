@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div className="zg-block-holder">
-        <Search />
+        {/* <Search /> */}
         <LogoModal />
         {platformLinks}
       </div>
