@@ -22,14 +22,14 @@ export default function AlertDialogSlide(props) {
 
   return (
     <div className="zg-platform-block">
-      <a
+      <span
         className="zg-link-button"
         target="_blank"
         style={{ color: platform.hex }}
         onClick={handleClickOpen}
       > 
         {platform.name}
-      </a>
+      </span>
 
       <Dialog open={open} keepMounted onClose={handleClose}>
         <Card
