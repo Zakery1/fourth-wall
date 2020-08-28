@@ -23,7 +23,7 @@ export default function AlertDialogSlide() {
   }
 
   return (
-    <div className="zg-block">
+    <div className="zg-logo-block">
       <img 
         onClick={handleClickOpen}
         className="main-logo"

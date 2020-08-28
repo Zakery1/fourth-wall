@@ -1,16 +1,42 @@
 .App {
-  background-image: url("./asset/mobile-background.png");
-  .zg-block-holder {
-    padding-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 100vh;
-    .zg-block {
-
+  .zg-top-section {
+    text-align: center;
+    .zg-block-holder {
+      padding-top: 30px;
+      .zg-logo-block {
+      }
+      .zg-platform-container {
+        padding-top: 30px;
+        .zg-about {
+          margin: 0 10px 10px 10px;
+        }
+        .zg-block-holder {
+        }
+      }
     }
   }
 }
 
 @media only screen and (min-width: 400px) {
+  .App {
+    .zg-top-section {
+      .zg-block-holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .zg-about {
+          width: 500px;
+        }
+        .zg-logo-block {
+        }
+        .zg-platform-container {
+          padding-top: 30px;
+          .zg-platform-block {
+            .zg-block-holder {
+            }
+          }
+        }
+      }
+    }
+  }
 }
