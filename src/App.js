@@ -18,7 +18,7 @@ function App() {
         <div className="zg-block-holder">
           {/* <Search /> */}
           <LogoModal />
-          <div className="zg-platform-container">
+          <div className="zg-about-platforms">
             <p className="zg-about">
               The Stage 18 Podcast is the greatest movie podcast in the history of recorded audio.  Zak and Cody, from two very different perspectives, discuss new movies, old movies, and movie news. 
             </p>
