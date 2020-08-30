@@ -20,8 +20,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        `${API_URL}/api/movie/search?movie=${searchInput}` ||
-          `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
+          //  || `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
       if (response.data.length === 0) {
         setData([]);
@@ -51,8 +51,6 @@ function Search() {
       </div>
     );
   });
-
-  console.log("data", data);
 
   return (
     <div className="zg-search-container">
