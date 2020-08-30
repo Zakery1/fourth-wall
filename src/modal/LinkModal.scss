@@ -1,37 +1,12 @@
 .zg-platform-block {
   margin-top: 10px;
   .zg-link-button {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-size: 14;
-  }
-  .zg-link-button:hover {
-    cursor: pointer;
   }
 
   .zg-link-modal {
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .zg-link-in-modal {
-      background: white;
-    }
-    .zg-cancel-modal {
-      margin-top: 20px;
-      background: white;
-    }
+
   }
 }
 
 @media only screen and (min-width: 400px) {
-  .zg-modal {
-    height: 500px;
-    width: 500px;
-  }
-  .zg-cancel-modal {
-    margin-top: 0px;
-  }
 }

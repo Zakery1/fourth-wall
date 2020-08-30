@@ -1,39 +1,35 @@
-.App {
-  .zg-top-section {
-    text-align: center;
-    .zg-block-holder {
+.zg-top-section {
+  text-align: center;
+  .zg-block-holder {
+    padding-top: 30px;
+    .zg-logo-block {
+    }
+    .zg-platform-container {
       padding-top: 30px;
-      .zg-logo-block {
+      .zg-about {
+        margin: 0 10px 10px 10px;
       }
-      .zg-platform-container {
-        padding-top: 30px;
-        .zg-about {
-          margin: 0 10px 10px 10px;
-        }
-        .zg-block-holder {
-        }
+      .zg-block-holder {
       }
     }
   }
 }
 
-@media only screen and (min-width: 400px) {
-  .App {
-    .zg-top-section {
-      .zg-block-holder {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        .zg-about {
-          width: 500px;
-        }
-        .zg-logo-block {
-        }
-        .zg-platform-container {
-          padding-top: 30px;
-          .zg-platform-block {
-            .zg-block-holder {
-            }
+@media only screen and (min-width: 501px) {
+  .zg-top-section {
+    .zg-block-holder {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .zg-about {
+        width: 500px;
+      }
+      .zg-logo-block {
+      }
+      .zg-platform-container {
+        padding-top: 0;
+        .zg-platform-block {
+          .zg-block-holder {
           }
         }
       }

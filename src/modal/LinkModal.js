@@ -2,7 +2,7 @@ import React from "react";
 
 import "../modal/LinkModal.scss";
 
-import Card from "@material-ui/core/Card";
+// import Card from "@material-ui/core/Card";
 
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
@@ -27,19 +27,19 @@ export default function AlertDialogSlide(props) {
         target="_blank"
         style={{ color: platform.hex }}
         onClick={handleClickOpen}
-      > 
+      >
         {platform.name}
       </span>
 
       <Dialog open={open} keepMounted onClose={handleClose}>
-        <Card
+        <div
           className="zg-link-modal"
-          style={{ border: `4px solid ${platform.hex}` }}
+          style={{ border: `4px solid ${platform.hex}`, textAlign: "center", width: "300px" }}
           target="_blank"
           href={platform.url}
         >
           <Button
-            style={{ color: platform.hex, border: `2px solid ${platform.hex}` }}
+            style={{ color: platform.hex, margin: "10px 0 10px 0" }}
             className="zg-link-in-modal"
             target="_blank"
             href={platform.url}
@@ -48,13 +48,13 @@ export default function AlertDialogSlide(props) {
           </Button>
           <br />
           <Button
-            style={{ color: platform.hex, border: `2px solid ${platform.hex}` }}
+            style={{ color: platform.hex, marginBottom: "10px"}}
             className="zg-cancel-modal"
             onClick={handleClose}
           >
             Cancel
           </Button>
-        </Card>
+        </div>
       </Dialog>
     </div>
   );
