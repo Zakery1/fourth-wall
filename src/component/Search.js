@@ -20,8 +20,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        `http://localhost:8080/api/movie/search?movie=${searchInput}` ||
-          `${process.env.API_URL}/api/movie/search?movie=${searchInput}`
+        `${process.env.API_URL}/api/movie/search?movie=${searchInput}` ||
+          `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
       if (response.data.length === 0) {
         setData([]);
