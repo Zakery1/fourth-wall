@@ -25,7 +25,7 @@ export default function AlertDialogSlide(props) {
       <span
         className="zg-link-button"
         target="_blank"
-        style={{ color: platform.hex }}
+        style={{ color: platform.hex, cursor: "pointer" }}
         onClick={handleClickOpen}
       >
         {platform.name}

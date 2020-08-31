@@ -5,13 +5,9 @@ import "./Search.scss";
 function Search() {
   const [data, setData] = useState([]);
   const [noResultsMessage, setNoResultsMessage] = useState("");
+  const  [searchInput, setSearchInput] = useState("");
 
-  const searchByMovie = (event) => {
-    if (event.key !== "Enter") {
-      return;
-    }
-
-    const searchInput = event.target.value;
+  const searchByMovie = () => {
 
     const fetchData = async () => {
       if (searchInput.trim().length === 0) {
@@ -20,8 +16,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
-          //  || `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        // `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
+        `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
       if (response.data.length === 0) {
         setData([]);
@@ -54,8 +50,13 @@ function Search() {
 
   return (
     <div className="zg-search-container">
-      Search <br />
-      <input onKeyDown={(event) => searchByMovie(event)} /> <br />
+      <div>
+        Check here to see if we've discussed a specific movie.
+        <input className="zg-search-input"   inputMode="search"  tabIndex="0" type="text"  onChange={(event) => setSearchInput(event.target.value)} />
+        <button onClick={() => searchByMovie()}>search for stuff</button>
+      </div>
+
+      <br />
       {relevantMovie}
       {noResultsMessage}
     </div>
