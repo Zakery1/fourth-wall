@@ -54,20 +54,19 @@ function Search() {
         <input
           className="zg-search-input"
           inputMode="search"
-          tabIndex="0"
           type="text"
           onChange={(event) => setSearchInput(event.target.value)}
         />
-        <button style={{ cursor: "pointer" }} onClick={searchByMovie}>
+        <span style={{ cursor: "pointer" }} onClick={searchByMovie}>
           search for stuff
-        </button>
+        </span>
       </div>
 
       <br />
       {relevantMovie}
       {noResultsMessage}
       <br />
-      {noResultsMessage ? "hey" : "nay"}
+
     </div>
   );
 }
