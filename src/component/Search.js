@@ -5,10 +5,9 @@ import "./Search.scss";
 function Search() {
   const [data, setData] = useState([]);
   const [noResultsMessage, setNoResultsMessage] = useState("");
-  const  [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState("");
 
   const searchByMovie = () => {
-
     const fetchData = async () => {
       if (searchInput.trim().length === 0) {
         setData([]);
@@ -52,13 +51,23 @@ function Search() {
     <div className="zg-search-container">
       <div>
         Check here to see if we've discussed a specific movie.
-        <input className="zg-search-input"   inputMode="search"  tabIndex="0" type="text"  onChange={(event) => setSearchInput(event.target.value)} />
-        <button onClick={() => searchByMovie()}>search for stuff</button>
+        <input
+          className="zg-search-input"
+          inputMode="search"
+          tabIndex="0"
+          type="text"
+          onChange={(event) => setSearchInput(event.target.value)}
+        />
+        <button style={{ cursor: "pointer" }} onClick={searchByMovie}>
+          search for stuff
+        </button>
       </div>
 
       <br />
       {relevantMovie}
       {noResultsMessage}
+      <br />
+      {noResultsMessage ? "hey" : "nay"}
     </div>
   );
 }

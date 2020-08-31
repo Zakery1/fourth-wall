@@ -1,8 +1,9 @@
 .zg-search-container {
-    margin: 30px 0 30px 0;
-    .zg-search-input {
-        font-size: 16px;
-    }
+  margin: 30px 0 30px 0;
+  .zg-search-input {
+    font-size: 16px;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 501px) {
