@@ -5,20 +5,24 @@ import "./Search.scss";
 function Search() {
   const [data, setData] = useState([]);
   const [noResultsMessage, setNoResultsMessage] = useState("");
-  const [searchInput, setSearchInput] = useState("");
+  // const [searchInput, setSearchInput] = useState("");
 
-   function searchByMovie () {
- 
-    async function fetchData () {
-      console.log("axios call");
+  function searchByMovie(event) {
+    if (event.key !== "Enter" || event.key !== "Enter") {
+      return;
+    }
+
+    event.target.blur();
+
+    const searchInput = event.target.value;
+
+    async function fetchData() {
       if (searchInput.trim().length === 0) {
-        console.log("no data");
         setData([]);
         setNoResultsMessage("");
         return;
       }
       const response = await axios.get(
-
         `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
         // `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
@@ -26,16 +30,16 @@ function Search() {
       if (response.data.length === 0) {
         setData([]);
         setNoResultsMessage(
-          "Sorry, we have not discussed a movie matching your search"
+          "Sorry, we have not discussed a movie matching your search."
         );
         return;
       }
       setNoResultsMessage("");
       setData(response.data);
-    };
+    }
 
     fetchData();
-  };
+  }
 
   const relevantMovie = data.map((movie) => {
     const searchedEpisodes = movie.episodes.map((episode) => {
@@ -54,24 +58,17 @@ function Search() {
   });
 
   return (
-    <div style={{ height: "1000px" }} className="zg-search-container">
+    <div className="zg-search-container">
       <div>
         Check here to see if we've discussed a specific movie.
+        <br />
         <input
           className="zg-search-input"
-          onChange={(event) => setSearchInput(event.target.value)}
+          type="search"
+          inputMode="search"
+          onKeyDown={(event) => searchByMovie(event)}
         />
       </div>
-      <br />
-      <div>{searchInput}</div>
-
-      <br />
-      <button
-        onClick={searchByMovie}
-      >
-        search for stuff
-      </button>
-
       <br />
       {relevantMovie}
       {noResultsMessage}
