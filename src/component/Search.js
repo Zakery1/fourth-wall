@@ -26,8 +26,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        // `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
-        `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
+        // `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
 
       if (response.data.length === 0) {
@@ -79,9 +79,10 @@ function Search() {
           onKeyDown={(event) => searchByMovie(event)}
         />
       </div>
-      {spinner ? spinnerGif : ""}
+      {spinner ? <img alt="spinner" src={spinnerGif}/> : ""}
       {relevantMovie}
       {noResultsMessage}
+      
     </div>
   );
 }
