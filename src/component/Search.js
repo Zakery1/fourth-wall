@@ -5,7 +5,6 @@ import "./Search.scss";
 function Search() {
   const [data, setData] = useState([]);
   const [noResultsMessage, setNoResultsMessage] = useState("");
-  // const [searchInput, setSearchInput] = useState("");
 
   function searchByMovie(event) {
     if (event.key !== "Enter" || event.key !== "Enter") {
@@ -23,8 +22,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
-        // `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        // `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
+        `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
 
       if (response.data.length === 0) {
@@ -44,15 +43,17 @@ function Search() {
   const relevantMovie = data.map((movie) => {
     const searchedEpisodes = movie.episodes.map((episode) => {
       return (
-        <div key={episode._id}>
+        <div key={episode._id} className="zg-searched-episodes">
           Season: {episode.seasonNumber} <br />
           Episode Title: {episode.episodeName}
         </div>
       );
     });
     return (
-      <div key={movie._id}>
-        We discuss {movie.name} in these episodes:{searchedEpisodes} <br />
+      <div key={movie._id} className="zg-result-container">
+        <div className="zg-found-movie">We discuss <span className="zg-found-movie-title">{movie.name}</span> in these episodes:</div>
+        {searchedEpisodes}
+        <br />
       </div>
     );
   });
@@ -69,7 +70,6 @@ function Search() {
           onKeyDown={(event) => searchByMovie(event)}
         />
       </div>
-      <br />
       {relevantMovie}
       {noResultsMessage}
     </div>
