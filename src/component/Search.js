@@ -12,7 +12,7 @@ function Search() {
     if (event.key !== "Enter") {
       return;
     }
-
+    setData([]);
     setSpinner(true);
 
     event.target.blur();
@@ -79,10 +79,9 @@ function Search() {
           onKeyDown={(event) => searchByMovie(event)}
         />
       </div>
-      {spinner ? <img alt="spinner" src={spinnerGif}/> : ""}
+      {spinner ? <img alt="spinner" src={spinnerGif} /> : ""}
       {relevantMovie}
       {noResultsMessage}
-      
     </div>
   );
 }
