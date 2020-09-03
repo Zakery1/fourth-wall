@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
+import spinnerGif from "../asset/spinner.gif";
 import "./Search.scss";
 
 function Search() {
   const [data, setData] = useState([]);
   const [noResultsMessage, setNoResultsMessage] = useState("");
+  const [spinner, setSpinner] = useState(false);
 
   function searchByMovie(event) {
-    if (event.key !== "Enter" || event.key !== "Enter") {
+    if (event.key !== "Enter") {
       return;
     }
+
+    setSpinner(true);
 
     event.target.blur();
 
@@ -22,8 +26,8 @@ function Search() {
         return;
       }
       const response = await axios.get(
-        `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
-        // `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        // `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
+        `http://localhost:8080/api/movie/search?movie=${searchInput}`
       );
 
       if (response.data.length === 0) {
@@ -31,10 +35,12 @@ function Search() {
         setNoResultsMessage(
           "Sorry, we have not discussed a movie matching your search."
         );
+        setSpinner(false);
         return;
       }
       setNoResultsMessage("");
       setData(response.data);
+      setSpinner(false);
     }
 
     fetchData();
@@ -51,7 +57,10 @@ function Search() {
     });
     return (
       <div key={movie._id} className="zg-result-container">
-        <div className="zg-found-movie">We discuss <span className="zg-found-movie-title">{movie.name}</span> in these episodes:</div>
+        <div className="zg-found-movie">
+          We discuss <span className="zg-found-movie-title">{movie.name}</span>{" "}
+          in these episodes:
+        </div>
         {searchedEpisodes}
         <br />
       </div>
@@ -70,6 +79,7 @@ function Search() {
           onKeyDown={(event) => searchByMovie(event)}
         />
       </div>
+      {spinner ? spinnerGif : ""}
       {relevantMovie}
       {noResultsMessage}
     </div>
