@@ -16,14 +16,19 @@ function Search() {
     if (searchInput.trim().length === 0) {
       return processBlankSearch();
     }
-    fetchData(searchInput);
+    fetchMovies(searchInput);
   }
 
-  async function fetchData(searchInput) {
+  async function fetchMovies(searchInput) {
     const response = await axios.get(
       // `https://limitless-lowlands-38782.herokuapp.com/api/movie/search?movie=${searchInput}`
       `http://localhost:8080/api/movie/search?movie=${searchInput}`
     );
+
+    processResponse(response);
+  }
+
+  function processResponse(response) {
     if (response.data.length === 0) {
       processNoResults();
       return;
