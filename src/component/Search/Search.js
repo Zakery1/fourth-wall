@@ -12,6 +12,7 @@ function Search() {
     if (event.key !== "Enter") {
       return;
     }
+    setSpinner(true);
     const searchInput = event.target.value;
     if (searchInput.trim().length === 0) {
       return processBlankSearch();
