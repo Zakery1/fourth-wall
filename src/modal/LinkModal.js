@@ -34,7 +34,11 @@ export default function AlertDialogSlide(props) {
       <Dialog open={open} keepMounted onClose={handleClose}>
         <div
           className="zg-link-modal"
-          style={{ border: `4px solid ${platform.hex}`, textAlign: "center", width: "300px" }}
+          style={{
+            border: `4px solid ${platform.hex}`,
+            textAlign: "center",
+            width: "300px",
+          }}
           target="_blank"
           href={platform.url}
         >
@@ -48,7 +52,7 @@ export default function AlertDialogSlide(props) {
           </Button>
           <br />
           <Button
-            style={{ color: platform.hex, marginBottom: "10px"}}
+            style={{ color: platform.hex, marginBottom: "10px" }}
             className="zg-cancel-modal"
             onClick={handleClose}
           >
