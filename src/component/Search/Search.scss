@@ -1,8 +1,10 @@
 .zg-search-container {
+  margin: 200px 30px;
   .zg-paper {
-    width: 450px;
+    // width: 450px;
     padding-top: 12px;
     margin: 15px;
+
   }
   padding-bottom: 40px;
   margin: 30px;
@@ -38,6 +40,11 @@
 @media only screen and (min-width: 501px) {
   .zg-search-container {
     margin: 30px 200px;
+    .zg-paper {
+      // width: 450px;
+      padding-top: 12px;
+      margin: 15px;
+    }
     .zg-search-input {
     }
     .zg-search-button {
