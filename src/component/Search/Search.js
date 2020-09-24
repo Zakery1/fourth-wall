@@ -83,8 +83,7 @@ function Search() {
 
   return (
     <div className="zg-search-container">
-      <div>
-        <Paper> Check here to see if we've discussed a specific movie.
+        <Paper className="zg-paper"> Check here to see if we've discussed a specific movie.
         <br />
         <input
           className="zg-search-input"
@@ -93,7 +92,6 @@ function Search() {
           onKeyDown={(event) => searchByMovie(event)}
         />
         </Paper>
-      </div>
       {spinner ? <img alt="spinner" src={spinnerGif} /> : ""}
       {relevantMovie}
       {noResultsMessage}
