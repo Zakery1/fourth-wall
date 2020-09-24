@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Paper from "@material-ui/core/Paper";
 import axios from "axios";
 import spinnerGif from "../../asset/spinner.gif";
 import "./Search.scss";
@@ -83,7 +84,7 @@ function Search() {
   return (
     <div className="zg-search-container">
       <div>
-        Check here to see if we've discussed a specific movie.
+        <Paper> Check here to see if we've discussed a specific movie.
         <br />
         <input
           className="zg-search-input"
@@ -91,6 +92,7 @@ function Search() {
           inputMode="search"
           onKeyDown={(event) => searchByMovie(event)}
         />
+        </Paper>
       </div>
       {spinner ? <img alt="spinner" src={spinnerGif} /> : ""}
       {relevantMovie}
