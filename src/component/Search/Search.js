@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import Paper from "@material-ui/core/Paper";
+
 import axios from "axios";
+
+import Paper from "@material-ui/core/Paper";
+
 import spinnerGif from "../../asset/spinner.gif";
+
 import "./Search.scss";
+
 
 function Search() {
   const [data, setData] = useState([]);

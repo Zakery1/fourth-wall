@@ -5,6 +5,7 @@ import LinkModal from "./modal/LinkModal";
 import Search from "./component/Search/Search.js";
 
 import podcastPlatforms from "./resource/podcastPlatforms";
+
 import "./App.scss";
 
 function App() {
