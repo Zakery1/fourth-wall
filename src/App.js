@@ -2,7 +2,9 @@ import React from "react";
 
 import LogoModal from "./modal/LogoModal";
 import LinkModal from "./modal/LinkModal";
+
 import Search from "./component/Search/Search.js";
+import MoviesCovered from './component/MoviesCovered/MoviesCovered.js'
 
 import podcastPlatforms from "./resource/podcastPlatforms";
 
@@ -18,6 +20,7 @@ function App() {
       <div className="zg-top-section">
         <div className="zg-block-holder">
           <LogoModal />
+          <MoviesCovered />
           <div className="zg-about-platforms">
             <p className="zg-about">
               The Stage 18 Podcast is the greatest movie podcast in the history
