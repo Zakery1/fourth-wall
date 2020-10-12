@@ -4,7 +4,8 @@ import LogoModal from "./modal/LogoModal";
 import LinkModal from "./modal/LinkModal";
 
 import Search from "./component/Search/Search.js";
-import MoviesCovered from './component/MoviesCovered/MoviesCovered.js'
+// import MoviesCovered from './component/MoviesCovered/MoviesCovered.js';
+import Footer from "./component/Footer/Footer";
 
 import podcastPlatforms from "./resource/podcastPlatforms";
 
@@ -36,8 +37,9 @@ function App() {
       </div>
       <div className="zg-search-section">
         <Search />
-        <MoviesCovered />
+        {/* <MoviesCovered /> */}
       </div>
+      <Footer/>
     </div>
   );
 }

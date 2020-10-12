@@ -1,0 +1,14 @@
+.zg-movie-list-container {
+  margin-bottom: 200px;
+  background: blue;
+  text-align: center;
+  .zg-movie-container {
+    .zg-movie-paper {
+      width: 300px;
+      background: rgb(176, 0, 176);
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) {
+}
