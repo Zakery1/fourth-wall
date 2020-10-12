@@ -16,9 +16,9 @@ function MoviesCovered() {
     fetchAllMovies();
   });
 
-    const movieList = allMovies.map(movie => {
-        return <div key={movie._id}>{movie.name}</div>
-    })
+    // const movieList = allMovies.map(movie => {
+    //     return <div key={movie._id}>{movie.name}</div>
+    // });
 
   return <div></div>;
 }
