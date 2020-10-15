@@ -26,7 +26,10 @@ function MoviesCovered() {
     );
   });
 
-  return <div className="zg-movie-container">{movieList}</div>;
+  return <div className="zg-movie-container">
+    <h2>Movies Discussed</h2>
+    {movieList}
+    </div>;
 }
 
 export default MoviesCovered;
