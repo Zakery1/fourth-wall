@@ -22,6 +22,7 @@ function MoviesCovered() {
     return (
       <div className="zg-movie" key={movie._id}>
         {movie.name}
+        <p>Second part</p>
       </div>
     );
   });
