@@ -41,7 +41,6 @@ function App() {
       <div className="zg-move-list-section">
         <MoviesCovered />
       </div>
-
       <Footer/>
     </div>
   );

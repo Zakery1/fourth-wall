@@ -10,8 +10,8 @@ function MoviesCovered() {
   useEffect(() => {
     async function fetchAllMovies() {
       const response = await axios.get(
-        `https://limitless-lowlands-38782.herokuapp.com/api/movie/all`
-        // `http://localhost:8080/api/movie/search?movie=${searchInput}`
+        // `https://limitless-lowlands-38782.herokuapp.com/api/movie/all`
+        `http://localhost:8080/api/movie/all`
       );
       updateAllMovies(response.data);
     }
