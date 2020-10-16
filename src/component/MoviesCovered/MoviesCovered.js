@@ -18,19 +18,30 @@ function MoviesCovered() {
     fetchAllMovies();
   });
 
-  const movieList = allMovies.map((movie) => {
+  const movieList = allMovies.map((movie, i) => {
+    const episodes = movie.episodes.map((episode) => {
+      return <div>{episode.episodeName}</div>;
+    });
+
+    console.log("movie", movie);
     return (
-      <div className="zg-movie" key={movie._id}>
-        {movie.name}
+      <div className="zg-movie zg-movie-title" key={movie._id}>
+        {episodes}
         <p>Second part</p>
       </div>
     );
   });
 
-  return <div className="zg-movie-container">
-    <h2>Movies Discussed</h2>
-    {movieList}
-    </div>;
+  return (
+    <div className="zg-movie-container">
+      <h2>Movies Discussed</h2>
+      <div className="zg-movie">
+        TestMovieName
+        <p>Second part</p>
+      </div>
+      {movieList}
+    </div>
+  );
 }
 
 export default MoviesCovered;
