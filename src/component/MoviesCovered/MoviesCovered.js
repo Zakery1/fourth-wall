@@ -20,14 +20,21 @@ function MoviesCovered() {
 
   const movieList = allMovies.map((movie, i) => {
     const episodes = movie.episodes.map((episode) => {
-      return <div>{episode.episodeName}</div>;
+      return (
+        <div>
+          Season: {episode.seasonNumber} <br />
+          Episode Title: {episode.episodeName}
+          <br/>
+          <br/>
+        </div>
+      );
     });
 
     console.log("movie", movie);
     return (
       <div className="zg-movie zg-movie-title" key={movie._id}>
-        {episodes}
         <p>Second part</p>
+        {episodes}
       </div>
     );
   });
