@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import MovieCoveredModal from "../../modal/MovieCovered";
+// import MovieCoveredModal from "../../modal/MovieCovered";
 
 import axios from "axios";
 
@@ -30,9 +30,8 @@ function MoviesCovered() {
     //   );
     // });
     return (
-      <div className="zg-movie zg-movie-title" key={movie._id}>
-
-        <p>{movie.name}</p>
+      <div className="zg-movie" key={movie._id}>
+        <div className="zg-movie-title">{movie.name}</div>
 
         {/* {episodes} */}
       </div>
@@ -40,10 +39,12 @@ function MoviesCovered() {
   });
 
   return (
-    <div className="zg-movie-container">
+    <div>
       <h2>Movies Discussed</h2>
-      <MovieCoveredModal />
-      {movieList}
+      <div className="zg-movie-container">
+        {/* <MovieCoveredModal /> */}
+        {movieList}
+      </div>
     </div>
   );
 }
