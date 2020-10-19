@@ -12,22 +12,11 @@
     background: white;
     width: 200px;
     margin: 10px 0 0 0;
-    height: 30px;
-    transition: .3s;
-  }
-  .zg-movie:hover {
-    cursor: pointer;
-    height: 70px;
   }
 }
 
 
 @media only screen and (min-width: 501px) {
   .zg-movie-container {
-    .zg-movie:hover {
-      cursor: pointer;
-      height: 200px;
-      transition: .3s;
-    }
   }
 }
