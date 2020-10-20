@@ -48,7 +48,7 @@ function Search() {
     setData([]);
     setNoResultsMessage("");
     setSpinner(false);
-    setNoResultsMessage("Actually search for something, bro");
+    setNoResultsMessage("");
     return;
   }
 
