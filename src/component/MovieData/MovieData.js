@@ -1,22 +1,29 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-// import axios from "axios";
+import axios from "axios";
 
-// const MovieData = () => {
-//   const [movieData, updateMovieData] = useState([]);
+import "./MovieData.scss";
 
-//   useEffect(() => {
-//     async function fetMovieData() {
-//         const response = await axios.get(
-//           // `http://www.omdbapi.com/?t=forrest&apikey=a752c9de`
-//         );
-//         updateMovieData(response.data)
-//     }
-//     fetMovieData();
-// })
-//   console.log(movieData)
+const MovieData = (props) => {
+  const [movieData, updateMovieData] = useState([]);
 
-//   return <div>Move Data</div>;
-// };
+  useEffect(() => {
+    async function fetMovieData() {
+      const response = await axios.get(
+        `http://www.omdbapi.com/?t=${props.movie}&apikey=a752c9de`
+      );
 
-// export default MovieData;
+      updateMovieData(response.data);
+    }
+    fetMovieData();
+  }, []);
+
+  //   const movies = movieData.map((movie) => {
+  //     console.log("THIS MOVIE", movie);
+  //     return <div>{movie.Title}</div>;
+  //   });
+
+  return <img src={movieData.Poster} alt={movieData.Title} />;
+};
+
+export default MovieData;

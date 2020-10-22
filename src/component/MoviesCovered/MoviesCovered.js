@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// // // import MovieData from "../MovieData/MovieData";
+import MovieData from "../MovieData/MovieData";
 
 // import MovieCoveredModal from "../../modal/MovieCovered";
 
@@ -17,7 +17,7 @@ function MoviesCovered() {
         `https://limitless-lowlands-38782.herokuapp.com/api/movie/all`
         // `http://localhost:8080/api/movie/all`
       );
-      console.log(response.data)
+      console.log(response.data);
       updateAllMovies(response.data);
     }
     fetchAllMovies();
@@ -35,7 +35,9 @@ function MoviesCovered() {
     return (
       <div className="zg-movie" key={movie._id}>
         <div className="zg-movie-title">{movie.name}</div>
-        <div>{/* <MovieData /> */}</div>
+        <div>
+        <MovieData movie={movie.name} />
+        </div>
 
         {/* {episodes} */}
       </div>
