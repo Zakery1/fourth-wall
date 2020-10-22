@@ -7,7 +7,7 @@ import "./MovieData.scss";
 const MovieData = (props) => {
   const [movieData, updateMovieData] = useState([]);
 
-  useEffect(() => {
+  useEffect((props) => {
     async function fetchMovieData() {
       const response = await axios.get(
         `http://www.omdbapi.com/?t=${props.movie}&apikey=a752c9de`
