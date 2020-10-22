@@ -7,17 +7,16 @@ import "./MovieData.scss";
 const MovieData = (props) => {
   const [movieData, updateMovieData] = useState([]);
 
-  async function fetMovieData() {
-    const response = await axios.get(
-      `http://www.omdbapi.com/?t=${props.movie}&apikey=a752c9de`
-    );
-
-    updateMovieData(response.data);
-  }
-
   useEffect(() => {
-    fetMovieData();
-  }, [fetMovieData]);
+    async function fetchMovieData() {
+      const response = await axios.get(
+        `http://www.omdbapi.com/?t=${props.movie}&apikey=a752c9de`
+      );
+
+      updateMovieData(response.data);
+    }
+    fetchMovieData();
+  }, [fetchMovieData]);
 
   //   const movies = movieData.map((movie) => {
   //     console.log("THIS MOVIE", movie);
