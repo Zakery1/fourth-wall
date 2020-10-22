@@ -15,9 +15,12 @@ const MovieData = (props) => {
         `http://www.omdbapi.com/?t=${movie}&apikey=a752c9de`
       );
 
+      console.log("response.data", response.data)
+
       updateMovieData(response.data);
     }
     fetchMovieData();
+
   }, [movie]);
 
   //   const movies = movieData.map((movie) => {
