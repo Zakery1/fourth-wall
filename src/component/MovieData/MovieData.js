@@ -16,7 +16,7 @@ const MovieData = (props) => {
       updateMovieData(response.data);
     }
     fetchMovieData();
-  }, [fetchMovieData]);
+  }, []);
 
   //   const movies = movieData.map((movie) => {
   //     console.log("THIS MOVIE", movie);
