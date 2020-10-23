@@ -23,23 +23,10 @@ function MoviesCovered() {
     fetchAllMovies();
   }, []);
 
-  const movieList = allMovies.map((movie, i) => {
-    // const episodes = movie.episodes.map((episode) => {
-    //   return (
-    //     <div key={episode.episodeName}>
-    //       Season: {episode.seasonNumber} <br />
-    //       Episode Title: {episode.episodeName}
-    //     </div>
-    //   );
-    // });
+  const movieList = allMovies.map((movie) => {
     return (
       <div className="zg-movie" key={movie._id}>
-        <div className="zg-movie-title">{movie.name}</div>
-        <div>
         <MovieData movie={movie.name} />
-        </div>
-
-        {/* {episodes} */}
       </div>
     );
   });
