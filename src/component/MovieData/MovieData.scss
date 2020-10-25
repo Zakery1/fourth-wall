@@ -5,23 +5,25 @@
 .zg-movie-data-container {
   border: none;
   background: none;
-  
-  .zg-movie-poster {
-    margin-top: 10px;
-    height: 400px;
-    width: 270px;
-    border-radius: 4px;
-  }
 
-  .zg-movie-title {
-    font-size: 15px;
-    margin: auto;
-    padding: 5px 0;
-    top: 15%;
-    width: 80%;
-    height: 50%;
-    color: white;
-    overflow: hidden;
+  .zg-poster-and-ratings {
+    .zg-movie-poster {
+      margin-top: 10px;
+      height: 400px;
+      width: 270px;
+      border-radius: 4px;
+    }
+
+    .zg-movie-title {
+      font-size: 15px;
+      margin: auto;
+      padding: 5px 0;
+      top: 15%;
+      width: 80%;
+      height: 50%;
+      color: white;
+      overflow: hidden;
+    }
   }
 }
 
@@ -39,17 +41,17 @@
     height: 300px;
     width: 200px;
   }
+
   .zg-movie-ratings {
-    display: flex;
-    flex-direction: row;
+    .zg-movie-rating {
+      display: flex;
+      flex-direction: row;
+    }
   }
+
   .zg-cancel-modal {
     text-align: center;
-    // background: pink;
     border: none;
-
-    //   border: none;
-    //   background: none;
   }
 }
 
@@ -64,13 +66,26 @@
   }
 
   .zg-movie-data-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 500px;
     width: 500px;
-    .zg-modal-poster {
-      margin: 20px;
-      border-radius: 7px;
-    }
-    .zg-movie-ratings {
+    .zg-poster-and-ratings {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      .zg-modal-poster {
+        margin: 20px;
+        border-radius: 7px;
+      }
+      .zg-movie-ratings {
+        .zg-movie-rating {
+          display: flex;
+          flex-direction: row;
+        }
+      }
     }
   }
 }

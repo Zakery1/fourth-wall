@@ -34,7 +34,11 @@ const MovieData = (props) => {
 
   const movieRatings = () =>
     movieData.Ratings.map((rating) => {
-      return <div className="zg-movie-ratings" key={rating.Source}>{rating.Source}: {rating.Value}</div>;
+      return (
+        <div className="zg-movie-rating" key={rating.Source}>
+          {rating.Source}: {rating.Value}
+        </div>
+      );
     });
 
   return (
@@ -50,16 +54,20 @@ const MovieData = (props) => {
       </button>
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
-          <img
-            className="zg-modal-poster"
-            src={movieData.Poster}
-            alt={movieData.Title}
-          />
-          {movieData.Ratings ? movieRatings() : ""}
+          <div className="zg-poster-and-ratings">
+            <img
+              className="zg-modal-poster"
+              src={movieData.Poster}
+              alt={movieData.Title}
+            />
+            <div className="zg-movie-ratings">
+              {movieData.Ratings ? movieRatings() : ""}
+            </div>
+          </div>
 
           {/* <h5>this episode is featured in</h5> */}
-          <br/>
-          <br/>
+          <br />
+          <br />
           <button className="zg-cancel-modal" onClick={handleClose}>
             cancel
           </button>
