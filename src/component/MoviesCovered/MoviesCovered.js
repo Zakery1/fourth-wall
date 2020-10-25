@@ -6,7 +6,7 @@ import MovieData from "../MovieData/MovieData";
 
 import axios from "axios";
 
-import "./MoviesCovered.scss";
+import "./MoviesCovered.scss";   
 
 function MoviesCovered() {
   const [allMovies, updateAllMovies] = useState([]);
@@ -17,7 +17,6 @@ function MoviesCovered() {
         `https://limitless-lowlands-38782.herokuapp.com/api/movie/all`
         // `http://localhost:8080/api/movie/all`
       );
-      console.log(response.data);
       updateAllMovies(response.data);
     }
     fetchAllMovies();

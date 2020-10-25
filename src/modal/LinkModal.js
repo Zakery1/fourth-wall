@@ -31,7 +31,7 @@ export default function AlertDialogSlide(props) {
         {platform.name}
       </span>
 
-      <Dialog open={open} keepMounted onClose={handleClose}>
+      <Dialog open={open} keepMounted>
         <div
           className="zg-link-modal"
           style={{
