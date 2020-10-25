@@ -8,7 +8,6 @@ import axios from "axios";
 import "./MovieData.scss";
 
 const MovieData = (props) => {
-  console.log("props", props.movie);
   const [movieData, updateMovieData] = useState([]);
   const [open, setOpen] = React.useState(false);
 
@@ -51,7 +50,7 @@ const MovieData = (props) => {
           alt={movieData.Title}
         />
 
-        <div className="zg-movie-title">{`${props.movie}`}</div>
+        <div className="zg-movie-title">{`${props.movie.name}`}</div>
       </button>
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
