@@ -25,7 +25,7 @@ function MoviesCovered() {
   const movieList = allMovies.map((movie) => {
     return (
       <div className="zg-movie" key={movie._id}>
-        <MovieData movie={movie.name} />
+        <MovieData movie={movie} />
       </div>
     );
   });

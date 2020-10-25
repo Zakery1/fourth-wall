@@ -8,10 +8,11 @@ import axios from "axios";
 import "./MovieData.scss";
 
 const MovieData = (props) => {
+  console.log("props", props.movie);
   const [movieData, updateMovieData] = useState([]);
   const [open, setOpen] = React.useState(false);
 
-  const { movie } = props;
+  const { name } = props.movie;
 
   function handleClickOpen() {
     setOpen(true);
@@ -24,13 +25,13 @@ const MovieData = (props) => {
   useEffect(() => {
     async function fetchMovieData() {
       const response = await axios.get(
-        `https://www.omdbapi.com/?t=${movie}&apikey=a752c9de`
+        `https://www.omdbapi.com/?t=${name}&apikey=a752c9de`
       );
 
       updateMovieData(response.data);
     }
     fetchMovieData();
-  }, [movie]);
+  }, [name]);
 
   const movieRatings = () =>
     movieData.Ratings.map((rating) => {
