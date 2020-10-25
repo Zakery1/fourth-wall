@@ -32,6 +32,8 @@ function App() {
               Listen to the Stage 18 Podcast on the following platforms:
             </span>
             {platformLinks}
+            <br/>
+            <a className="zg-discord-link" href="https://discord.gg/6SfpWsf">Join our Discord Server!</a>
           </div>
         </div>
       </div>
