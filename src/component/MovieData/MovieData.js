@@ -36,7 +36,7 @@ const MovieData = (props) => {
     movieData.Ratings.map((rating) => {
       return (
         <div className="zg-movie-rating" key={rating.Source}>
-          {rating.Source}: {rating.Value}
+          {rating.Source === "Internet Movie Database" ? "IMDB" : rating.Source }: {rating.Value}
         </div>
       );
     });
