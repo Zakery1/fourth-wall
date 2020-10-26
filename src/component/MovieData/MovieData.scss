@@ -10,6 +10,7 @@
 
   .zg-movie-poster {
     height: 90%;
+    border-radius: 4px;
   }
 
   .zg-movie-title {
@@ -62,8 +63,9 @@
 
 @media only screen and (min-width: 501px) {
   .zg-movie-data-container {
+    max-width: 169px;
     .zg-movie-poster {
-      margin-top: 10px;
+      // margin-top: 10px;
       height: 250px;
       width: 169px;
       border-radius: 4px;

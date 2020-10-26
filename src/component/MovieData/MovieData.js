@@ -50,7 +50,7 @@ const MovieData = (props) => {
           alt={movieData.Title}
         />
 
-        <div className="zg-movie-title">{`${props.movie.name}`}</div>
+        {/* <div className="zg-movie-title">{`${props.movie.name}`}</div> */}
       </button>
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
