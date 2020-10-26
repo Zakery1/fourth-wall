@@ -69,7 +69,7 @@ const MovieData = (props) => {
           <br />
           <br />
           <button className="zg-cancel-modal" onClick={handleClose}>
-            cancel
+            Cancel
           </button>
         </div>
       </Dialog>

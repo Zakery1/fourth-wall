@@ -53,11 +53,12 @@
         flex-direction: row;
       }
     }
-
-    .zg-cancel-modal {
-      text-align: center;
-      border: none;
-    }
+  }
+  .zg-cancel-modal {
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 15px;
   }
 }
 
