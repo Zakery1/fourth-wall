@@ -36,7 +36,9 @@ const MovieData = (props) => {
     movieData.Ratings.map((rating) => {
       return (
         <div className="zg-movie-rating" key={rating.Source}>
-          {rating.Source === "Internet Movie Database" ? "IMDB" : rating.Source }: {rating.Value}
+          <div className="zg-rating-value">{rating.Value}</div>
+   
+          <div className="zg-rating-source">{rating.Source === "Internet Movie Database" ? "IMDB" : rating.Source}</div>
         </div>
       );
     });
@@ -49,8 +51,6 @@ const MovieData = (props) => {
           src={movieData.Poster}
           alt={movieData.Title}
         />
-
-        {/* <div className="zg-movie-title">{`${props.movie.name}`}</div> */}
       </button>
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
@@ -73,7 +73,6 @@ const MovieData = (props) => {
           </button>
         </div>
       </Dialog>
-      {/* {movieData.Title.includes("Star Wars") ? <div className="zg-movie-title">{`Star Wars:  The Rist of Skywalker`}</div> : <div className="zg-movie-title">{`${movieData.Title}`}</div>} */}
     </div>
   );
 };
