@@ -32,16 +32,32 @@ const MovieData = (props) => {
     fetchMovieData();
   }, [name]);
 
+  const timestamps = () =>
+    props.movie.episodes.map((episode) => {
+      // console.log("here", episode.timestamp);
+      return (
+        <div key={episode._id}>
+          <a href={episode.timestamp}>Here</a>
+        </div>
+      );
+    });
+
   const movieRatings = () =>
     movieData.Ratings.map((rating) => {
       return (
         <div className="zg-movie-rating" key={rating.Source}>
           <div className="zg-rating-value">{rating.Value}</div>
-   
-          <div className="zg-rating-source">{rating.Source === "Internet Movie Database" ? "IMDB" : rating.Source}</div>
+
+          <div className="zg-rating-source">
+            {rating.Source === "Internet Movie Database"
+              ? "IMDB"
+              : rating.Source}
+          </div>
         </div>
       );
     });
+
+    // console.log("movie Data", movieData)
 
   return (
     <div>
@@ -54,14 +70,20 @@ const MovieData = (props) => {
       </button>
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
-          <div className="zg-poster-and-ratings">
+          <div className="zg-poster-and-data">
             <img
               className="zg-modal-poster"
               src={movieData.Poster}
               alt={movieData.Title}
             />
-            <div className="zg-movie-ratings">
-              {movieData.Ratings ? movieRatings() : ""}
+            <div className="zg-modal-data">
+              <div className="zg-movie-ratings">
+                {movieData.Ratings ? movieRatings() : ""}
+              </div>
+              <div className="zg-movie-instances">
+                We discuss {movieData.Title} in the following episodes
+                <div>timestamps: {timestamps()}</div>
+              </div>
             </div>
           </div>
 

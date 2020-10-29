@@ -6,7 +6,9 @@ import MovieData from "../MovieData/MovieData";
 
 import axios from "axios";
 
-import "./MoviesCovered.scss";   
+import spinner from "../../asset/spinner.gif";
+
+import "./MoviesCovered.scss";
 
 function MoviesCovered() {
   const [allMovies, updateAllMovies] = useState([]);
@@ -36,7 +38,8 @@ function MoviesCovered() {
       <div className="zg-movie-container">
         {/* <MovieCoveredModal /> */}
 
-        {movieList}
+        {/* {movieList} */}
+        {allMovies.length > 0 ? movieList : <img src={spinner} />}
       </div>
     </div>
   );
