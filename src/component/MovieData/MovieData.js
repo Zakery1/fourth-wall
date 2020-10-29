@@ -37,7 +37,8 @@ const MovieData = (props) => {
       // console.log("here", episode.timestamp);
       return (
         <div key={episode._id}>
-          <a href={episode.timestamp}>Here</a>
+          <span>{episode.episodeName}</span>
+          <a href={episode.timestamp}>Go to episode</a>
         </div>
       );
     });
