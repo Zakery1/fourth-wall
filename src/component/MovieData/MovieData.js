@@ -37,7 +37,8 @@ const MovieData = (props) => {
       // console.log("here", episode.timestamp);
       return (
         <div key={episode._id}>
-          <span>{episode.episodeName}</span>
+          <div>Season: {episode.seasonNumber} <br/>{episode.episodeName}</div><br/>
+
           <a href={episode.timestamp}>Go to episode</a>
         </div>
       );
@@ -83,7 +84,8 @@ const MovieData = (props) => {
               </div>
               <div className="zg-movie-instances">
                 We discuss {movieData.Title} in the following episodes
-                <div>timestamps: {timestamps()}</div>
+                <br/>
+                <div> {timestamps()}</div>
               </div>
             </div>
           </div>
