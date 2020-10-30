@@ -24,7 +24,7 @@ const MovieData = (props) => {
   useEffect(() => {
     async function fetchMovieData() {
       const response = await axios.get(
-        `https://www.omdbapi.com/?t=${name}&apikey=${OMDB_KEY}`
+        `https://www.omdbapi.com/?t=${name}&apikey=${process.env.REACT_APP_OMDB_KEY}`
       );
 
       updateMovieData(response.data);
