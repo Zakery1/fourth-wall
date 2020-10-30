@@ -37,9 +37,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="zg-search-section">
+      {/* <div className="zg-search-section">
         <Search />
-      </div>
+      </div> */}
       <div className="zg-move-list-section">
         <MoviesCovered />
       </div>

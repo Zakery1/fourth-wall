@@ -34,12 +34,14 @@ const MovieData = (props) => {
 
   const timestamps = () =>
     props.movie.episodes.map((episode) => {
-      // console.log("here", episode.timestamp);
       return (
-        <div key={episode._id}>
-          <div>Season: {episode.seasonNumber} <br/>{episode.episodeName}</div><br/>
-
-          <a href={episode.timestamp}>Go to episode</a>
+        <div className="zg-timestamp" key={episode._id}>
+          <div className="zg-episode-reference">
+            <p className="zg-episode-reference"></p>
+            Season: {episode.seasonNumber} <br />
+            {episode.episodeName}
+          </div>
+          <a href={episode.timestamp} className="zg-timestamp-link">Go directly to discussion.<span>&#8594;</span></a>
         </div>
       );
     });
@@ -59,8 +61,6 @@ const MovieData = (props) => {
       );
     });
 
-    // console.log("movie Data", movieData)
-
   return (
     <div>
       <button onClick={handleClickOpen} className="zg-movie-data-container">
@@ -70,6 +70,7 @@ const MovieData = (props) => {
           alt={movieData.Title}
         />
       </button>
+      
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
           <div className="zg-poster-and-data">
@@ -83,21 +84,17 @@ const MovieData = (props) => {
                 {movieData.Ratings ? movieRatings() : ""}
               </div>
               <div className="zg-movie-instances">
-                We discuss {movieData.Title} in the following episodes
-                <br/>
-                <div> {timestamps()}</div>
+                We discuss {movieData.Title} in:
+                <span className="zg-timestamps"> {timestamps()}</span>
               </div>
             </div>
           </div>
-
-          {/* <h5>this episode is featured in</h5> */}
-          <br />
-          <br />
           <button className="zg-cancel-modal" onClick={handleClose}>
             Cancel
           </button>
         </div>
       </Dialog>
+
     </div>
   );
 };
