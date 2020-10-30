@@ -39,7 +39,7 @@ function MoviesCovered() {
         {/* <MovieCoveredModal /> */}
 
         {/* {movieList} */}
-        {allMovies.length > 0 ? movieList : <img src={spinner} />}
+        {allMovies.length > 0 ? movieList : <img src={spinner} alt="loading" />}
       </div>
     </div>
   );

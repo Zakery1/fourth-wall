@@ -3,7 +3,7 @@ import React from "react";
 import LogoModal from "./modal/LogoModal";
 import LinkModal from "./modal/LinkModal";
 
-import Search from "./component/Search/Search.js";
+// import Search from "./component/Search/Search.js";
 import MoviesCovered from './component/MoviesCovered/MoviesCovered.js';
 import Footer from "./component/Footer/Footer";
 
