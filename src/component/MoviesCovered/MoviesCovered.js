@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import MovieData from "../MovieData/MovieData";
 
-// import MovieCoveredModal from "../../modal/MovieCovered";
-
 import axios from "axios";
 
 import spinner from "../../asset/spinner.gif";
@@ -36,9 +34,6 @@ function MoviesCovered() {
     <div>
       <h2>Movies Discussed</h2>
       <div className="zg-movie-container">
-        {/* <MovieCoveredModal /> */}
-
-        {/* {movieList} */}
         {allMovies.length > 0 ? movieList : <img src={spinner} alt="loading" />}
       </div>
     </div>

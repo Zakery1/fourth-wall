@@ -19,7 +19,6 @@
   width: 312px;
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   .zg-poster-and-data {
     display: flex;
@@ -35,24 +34,15 @@
     }
 
     .zg-modal-data {
-      // background: pink;
-      // display: flex;
-      // flex-direction: column;
-
       .zg-movie-ratings {
-        // background: yellow;
         display: flex;
         flex-direction: row;
         justify-content: center;
         padding: 10px;
         border: 1px solid rgb(67, 67, 67);
         font-size: 12px;
-        // margin-right: 0px;
-        // height: 50px;
-
         .zg-movie-rating {
           white-space: normal;
-          // background: rgb(0, 255, 0);
           display: flex;
           flex-direction: column;
           padding: 0 4px;
@@ -67,7 +57,6 @@
       .zg-movie-instances {
         margin-top: 2px;
         .zg-timestamps {
-
           .zg-timestamp {
             //  background: rgb(194, 103, 194);
             .zg-episode-reference {
@@ -98,30 +87,21 @@
 @media only screen and (min-width: 501px) {
   .zg-movie-data-container {
     max-width: 169px;
-    padding: 0;
     margin-top: 10px;
     .zg-movie-poster {
       height: 250px;
       width: 169px;
-      border-radius: 4px;
     }
   }
 
   .zg-movie-data-modal {
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    height: 500px;
     width: 600px;
     .zg-poster-and-data {
-      display: flex;
       flex-direction: row;
-      align-items: center;
-      align-content: center;
       margin-right: 20px;
       .zg-modal-poster {
         margin: 20px;
-        border-radius: 7px;
         height: 300px;
         width: 200px;
       }
@@ -129,12 +109,9 @@
       .zg-modal-data {
         .zg-movie-ratings {
           border: none;
-          // margin-right: 20px;
           .zg-movie-rating {
-            display: flex;
             flex-direction: column;
             .zg-rating-value {
-              padding-bottom: 8px;
             }
             .zg-rating-source {
             }
