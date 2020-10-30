@@ -38,10 +38,15 @@ const MovieData = (props) => {
         <div className="zg-timestamp" key={episode._id}>
           <div className="zg-episode-reference">
             <p className="zg-episode-reference"></p>
-            Season: {episode.seasonNumber} <br />
+            <span className="zg-season-number">
+              Season: {episode.seasonNumber}
+            </span>
+            <br />
             {episode.episodeName}
           </div>
-          <a href={episode.timestamp} className="zg-timestamp-link">Go directly to discussion.<span>&#8594;</span></a>
+          <a href={episode.timestamp} className="zg-timestamp-link">
+            Go directly to discussion.<span>&#8594;</span>
+          </a>
         </div>
       );
     });
@@ -70,7 +75,7 @@ const MovieData = (props) => {
           alt={movieData.Title}
         />
       </button>
-      
+
       <Dialog open={open} keepMounted>
         <div className="zg-movie-data-modal">
           <div className="zg-poster-and-data">
@@ -94,7 +99,6 @@ const MovieData = (props) => {
           </button>
         </div>
       </Dialog>
-
     </div>
   );
 };

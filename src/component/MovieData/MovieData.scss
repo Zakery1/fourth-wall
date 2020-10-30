@@ -71,10 +71,15 @@
           .zg-timestamp {
             //  background: rgb(194, 103, 194);
             .zg-episode-reference {
-              margin: 0;
+              text-align: left;
+              margin: 3px 0 0 3px;
+              .zg-season-number {
+                text-align: left;
+                text-decoration: underline;
+              }
             }
             .zg-timestamp-link {
-              margin-top: 5px;
+              margin-top: 8px;
             }
           }
         }
@@ -123,6 +128,7 @@
 
       .zg-modal-data {
         .zg-movie-ratings {
+          border: none;
           // margin-right: 20px;
           .zg-movie-rating {
             display: flex;
