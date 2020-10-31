@@ -32,7 +32,8 @@ function MoviesCovered() {
 
   return (
     <div>
-      <h2>Movies Discussed</h2>
+      <h2 className="zg-movies-covered-header">Movies Discussed</h2>
+
       <div className="zg-movie-container">
         {allMovies.length > 0 ? movieList : <img src={spinner} alt="loading" />}
       </div>
