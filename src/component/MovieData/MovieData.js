@@ -24,7 +24,8 @@ const MovieData = (props) => {
   useEffect(() => {
     async function fetchMovieData() {
       const response = await axios.get(
-        `https://www.omdbapi.com/?t=${name}&apikey=${process.env.REACT_APP_OMDB_KEY}`
+        // `https://www.omdbapi.com/?t=${name}&apikey=${process.env.REACT_APP_OMDB_KEY}`
+        `https://www.omdbapi.com/?t=${name}&apikey=a752c9de`
       );
 
       updateMovieData(response.data);
@@ -41,12 +42,11 @@ const MovieData = (props) => {
             <span className="zg-season-number">
               Season: {episode.seasonNumber}
             </span>
-            <br />
-            {episode.episodeName}
+            <span className="zg-episode-name">{episode.episodeName}</span>
+            <a href={episode.timestamp} className="zg-timestamp-link">
+              Go directly to discussion.<span>&#8594;</span>
+            </a>
           </div>
-          <a href={episode.timestamp} className="zg-timestamp-link">
-            Go directly to discussion.<span>&#8594;</span>
-          </a>
         </div>
       );
     });
@@ -89,7 +89,9 @@ const MovieData = (props) => {
                 {movieData.Ratings ? movieRatings() : ""}
               </div>
               <div className="zg-movie-instances">
-                We discuss {movieData.Title} in:
+                <span className="zg-timespan-header">
+                  We discuss {movieData.Title} in:
+                </span>
                 <span className="zg-timestamps"> {timestamps()}</span>
               </div>
             </div>

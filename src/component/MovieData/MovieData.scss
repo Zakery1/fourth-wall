@@ -15,7 +15,8 @@
 }
 
 .zg-movie-data-modal {
-  height: 500px;
+  max-height: 700px;
+  min-height: 400px;
   width: 312px;
   display: flex;
   flex-direction: column;
@@ -31,16 +32,25 @@
       border-radius: 7px;
       height: 150px;
       width: 100px;
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     }
 
     .zg-modal-data {
+      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      margin: 0 20px;
       .zg-movie-ratings {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        padding: 10px;
-        border: 1px solid rgb(67, 67, 67);
-        font-size: 12px;
+        justify-content: space-evenly;
+        padding: 5px;
+        border-bottom: 1px solid rgb(155, 155, 155);
+        font-size: 14px;
+
         .zg-movie-rating {
           white-space: normal;
           display: flex;
@@ -55,20 +65,40 @@
         }
       }
       .zg-movie-instances {
-        margin-top: 2px;
+        margin-top: 8px;
+        justify-content: center;
+        .zg-timespan-header {
+          margin: 0 5px;
+        }
         .zg-timestamps {
           .zg-timestamp {
-            //  background: rgb(194, 103, 194);
+            border-bottom: 1px solid rgb(165, 165, 165);
+            padding-bottom: 20px;
             .zg-episode-reference {
               text-align: left;
-              margin: 3px 0 0 3px;
+              margin: 3px 0 5px 3px;
+              padding: 0 10px;
+              display: flex;
+              flex-direction: column;
               .zg-season-number {
                 text-align: left;
                 text-decoration: underline;
               }
-            }
-            .zg-timestamp-link {
-              margin-top: 8px;
+              .zg-episode-name {
+                font-weight: lighter;
+                font-size: 14px;
+              }
+              .zg-timestamp-link {
+                box-shadow: 0px 3px 0px -1px rgba(0, 0, 0, 0.2),
+                  0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+                  0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+                font-size: 14px;
+                background: red;
+                color: white;
+                border-radius: 5px;
+                padding: 5px;
+                text-decoration: none;
+              }
             }
           }
         }
@@ -76,11 +106,16 @@
     }
   }
   .zg-cancel-modal {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     text-align: center;
     border: none;
     background: none;
     font-size: 15px;
-    margin: 15px 0 5px 0;
+    height: 40px;
+    border-radius: 5px;
+
+    margin: 30px 100px 20px 100px;
   }
 }
 
@@ -101,6 +136,9 @@
       flex-direction: row;
       margin-right: 20px;
       .zg-modal-poster {
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+          0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 18px 0px rgba(0, 0, 0, 0.12);
         margin: 20px;
         height: 300px;
         width: 200px;
@@ -108,7 +146,7 @@
 
       .zg-modal-data {
         .zg-movie-ratings {
-          border: none;
+          // border: none;
           .zg-movie-rating {
             flex-direction: column;
             .zg-rating-value {
@@ -118,19 +156,28 @@
           }
         }
         .zg-movie-instances {
+          .zg-timespan-header {
+          }
           .zg-timestamps {
             .zg-timestamp {
               .zg-episode-reference {
                 margin-bottom: 5px;
+                // justify-content: center;
                 .zg-season-number {
                 }
-              }
-              .zg-timestamp-link {
+                .zg-episode-name {
+                }
+                .zg-timestamp-link {
+                }
               }
             }
           }
         }
       }
+    }
+    .zg-cancel-modal {
+      padding: 5px;
+      margin: 10px 200px;
     }
   }
 }
