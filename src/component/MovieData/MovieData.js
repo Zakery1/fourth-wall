@@ -38,13 +38,13 @@ const MovieData = (props) => {
       return (
         <div className="zg-timestamp" key={episode._id}>
           <div className="zg-episode-reference">
-            <p className="zg-episode-reference"></p>
             <span className="zg-season-number">
-              Season: {episode.seasonNumber}
+              {/* Season: {episode.seasonNumber} */}
+              Episode Name:
             </span>
             <span className="zg-episode-name">{episode.episodeName}</span>
             <a href={episode.timestamp} className="zg-timestamp-link">
-              Go directly to discussion.<span>&#8594;</span>
+              Go directly to discussion on Youtube.<span>&#8594;</span>
             </a>
           </div>
         </div>
@@ -90,7 +90,8 @@ const MovieData = (props) => {
               </div>
               <div className="zg-movie-instances">
                 <span className="zg-timespan-header">
-                  We discuss {movieData.Title} in:
+                  We discuss{" "}
+                  <span className="zg-movie-title">{movieData.Title}</span> in:
                 </span>
                 <span className="zg-timestamps"> {timestamps()}</span>
               </div>
