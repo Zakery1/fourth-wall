@@ -1,32 +1,5 @@
 .zg-top-section {
   text-align: center;
-  .zg-block-holder {
-    padding-top: 30px;
-    .zg-logo-block {
-    }
-    .zg-about-platforms {
-      // padding: 15px 0 15px 0;
-      margin: 15px 10px 15px 10px;
-      border-radius: 4px;
-
-      .zg-about {
-        margin: 0 10px 10px 10px;
-      }
-
-      .zg-discord-link {
-        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
-        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-        padding: 5px 8px;
-        border-radius: 4px;
-        color:white;
-        background: #7289DA;
-        text-decoration: none;
-      }
-      .zg-block-holder {
-      }
-    }
-  }
 }
 
 .zg-search-section {
@@ -39,22 +12,5 @@
 
 @media only screen and (min-width: 501px) {
   .zg-top-section {
-    .zg-block-holder {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      .zg-about {
-        width: 500px;
-      }
-      .zg-logo-block {
-      }
-      .zg-about-platforms {
-        padding: 0;
-        .zg-platform-block {
-          .zg-block-holder {
-          }
-        }
-      }
-    }
   }
 }
