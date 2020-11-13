@@ -44,7 +44,7 @@ const MovieData = (props) => {
             </span>
             <span className="zg-episode-name">{episode.episodeName}</span>
             <a href={episode.timestamp} className="zg-timestamp-link">
-              Go directly to discussion on Youtube.<span>&#8594;</span>
+              Go directly to discussion on Youtube<span>&#8594;</span>
             </a>
           </div>
         </div>
