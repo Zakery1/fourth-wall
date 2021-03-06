@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import Dialog from "@material-ui/core/Dialog";
 // import Button from "@material-ui/core/Button";
@@ -21,17 +21,19 @@ const MovieData = (props) => {
     setOpen(false);
   }
 
-  useEffect(() => {
-    async function fetchMovieData() {
-      const response = await axios.get(
-        // `https://www.omdbapi.com/?t=${name}&apikey=${process.env.REACT_APP_OMDB_KEY}`
-        `https://www.omdbapi.com/?t=${name}&apikey=a752c9de`
-      );
+  const mediaURL = process.env.REACT_APP_OMDB_KEY;
 
-      updateMovieData(response.data);
-    }
+  const fetchMovieData = useCallback( async () => {
+    const response = await axios.get(
+      `https://www.omdbapi.com/?t=${name}&apikey=${mediaURL}`
+    );
+
+    updateMovieData(response.data);
+  }, [name, mediaURL]);
+
+  useEffect(() => {
     fetchMovieData();
-  }, [name]);
+  }, [fetchMovieData]);
 
   const timestamps = () =>
     props.movie.episodes.map((episode) => {
